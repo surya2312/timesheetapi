@@ -14,7 +14,7 @@ router.get('/users', function(req, res, next){
 
 router.put('/checkuser', function(req, res, next){
     var user = req.body;
-    
+    console.log(user);
     db.users.findOne({email:user.email, password:user.password},function(err, user){
         if(err){
             res.send(err);
